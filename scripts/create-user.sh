@@ -37,6 +37,7 @@ else
 fi
 
 if [ "${USERNAME}" != "root" ]; then
+  apt install -y -q --no-install-recommends sudo
   echo $USERNAME ALL=\(root\) NOPASSWD:ALL >/etc/sudoers.d/$USERNAME
   chmod 0440 /etc/sudoers.d/$USERNAME
 fi
