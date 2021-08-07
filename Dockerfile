@@ -4,7 +4,7 @@ LABEL maintainer="Nicholas Nooney <nicholasnooney@gmail.com>"
 
 COPY scripts/*.sh /tmp/scripts/
 
-ARG USERNAME="user"
+ARG USERNAME="nicholasnooney"
 ARG USER_UID="auto"
 ARG USER_GID="auto"
 
