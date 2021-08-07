@@ -24,12 +24,12 @@ if id -u "${USERNAME}" >/dev/null 2>&1; then
   fi
 else
   # create user
-  if [ "${USER_GID}" = "automatic" ]; then
+  if [ "${USER_GID}" = "auto" ]; then
     groupadd $USERNAME
   else
     groupadd --gid $USER_GID $USERNAME
   fi
-  if [ "${USER_UID}" = "automatic" ]; then
+  if [ "${USER_UID}" = "auto" ]; then
     useradd -s /bin/bash --gid $USERNAME -m $USERNAME
   else
     useradd -s /bin/bash --uid $USER_UID --gid $USERNAME -m $USERNAME
